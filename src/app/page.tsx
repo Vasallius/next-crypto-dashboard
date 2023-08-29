@@ -24,10 +24,10 @@ export default function Home() {
   const [setupsData, setSetupsData] = useState<SetupsApi | null>(null);
 
   useEffect(() => {
-    axios.get("http://holy-lake-1350.fly.dev").then((response) => {
+    axios.get("https://holy-lake-1350.fly.dev").then((response) => {
       setData(response.data);
     });
-    axios.get("http://holy-lake-1350.fly.dev/setups/4h").then((response) => {
+    axios.get("https://holy-lake-1350.fly.dev/setups/4h").then((response) => {
       setSetupsData(response.data);
     });
   }, []);
