@@ -61,26 +61,27 @@ export default function Home() {
           <TimeframeButton handleClick={handleClick} timeframe="4h" />
           <TimeframeButton handleClick={handleClick} timeframe="1d" />
         </div>
-        <div className="flex items-center justify-center">
-          <Card className="w-60 mx-4">
+        <div className="flex flex-wrap justify-center">
+          <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
             <CardHeader className="text-center">Uptrend</CardHeader>
             <CardContent className="text-center">
               {setupsData?.uptrend.length}
             </CardContent>
           </Card>
-          <Card className="w-60 mx-4">
+          <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
             <CardHeader className="text-center">Sideways</CardHeader>
             <CardContent className="text-center">
               {setupsData?.sideways.length}
             </CardContent>
           </Card>
-          <Card className="w-60 mx-4">
+          <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
             <CardHeader className="text-center">Downtrend</CardHeader>
             <CardContent className="text-center">
               {setupsData?.downtrend.length}
             </CardContent>
           </Card>
         </div>
+
         <div className="w-3/4">
           <h1>FOD</h1>
           {setupsData &&
