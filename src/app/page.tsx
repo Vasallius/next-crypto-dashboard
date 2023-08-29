@@ -1,4 +1,5 @@
 "use client";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -36,25 +37,48 @@ export default function Home() {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <Card className="w-60 mx-4">
-        <CardHeader className="text-center">Uptrend</CardHeader>
-        <CardContent className="text-center">
-          {setupsData?.uptrend.length}
-        </CardContent>
-      </Card>
-      <Card className="w-60 mx-4">
-        <CardHeader className="text-center">Sideways</CardHeader>
-        <CardContent className="text-center">
-          {setupsData?.sideways.length}
-        </CardContent>
-      </Card>
-      <Card className="w-60 mx-4">
-        <CardHeader className="text-center">Downtrend</CardHeader>
-        <CardContent className="text-center">
-          {setupsData?.downtrend.length}
-        </CardContent>
-      </Card>
+    <div className="flex flex-col items-center justify-center ">
+      <div className="flex items-center justify-center">
+        <Card className="w-60 mx-4">
+          <CardHeader className="text-center">Uptrend</CardHeader>
+          <CardContent className="text-center">
+            {setupsData?.uptrend.length}
+          </CardContent>
+        </Card>
+        <Card className="w-60 mx-4">
+          <CardHeader className="text-center">Sideways</CardHeader>
+          <CardContent className="text-center">
+            {setupsData?.sideways.length}
+          </CardContent>
+        </Card>
+        <Card className="w-60 mx-4">
+          <CardHeader className="text-center">Downtrend</CardHeader>
+          <CardContent className="text-center">
+            {setupsData?.downtrend.length}
+          </CardContent>
+        </Card>
+      </div>
+      <div className="w-3/4">
+        <h1>UPTREND</h1>
+        {setupsData &&
+          setupsData.uptrend.map((symbol: string, index: number) => (
+            <Badge key={symbol}>{symbol}</Badge>
+          ))}
+      </div>
+      <div className="w-3/4">
+        <h1>SIDEWAYS</h1>
+        {setupsData &&
+          setupsData.sideways.map((symbol: string, index: number) => (
+            <Badge key={symbol}>{symbol}</Badge>
+          ))}
+      </div>
+      <div className="w-3/4">
+        <h1>DOWNTREND</h1>
+        {setupsData &&
+          setupsData.downtrend.map((symbol: string, index: number) => (
+            <Badge key={symbol}>{symbol}</Badge>
+          ))}
+      </div>
     </div>
   );
 }
