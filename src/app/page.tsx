@@ -17,6 +17,7 @@ interface SetupsApi {
   sideways: string[];
   timetaken: number;
   uptrend: string[];
+  DE: string[];
 }
 
 export default function Home() {
@@ -93,6 +94,13 @@ export default function Home() {
           <h1>FOB</h1>
           {setupsData &&
             setupsData.FOB.map((symbol: string, index: number) => (
+              <Badge key={symbol}>{symbol}</Badge>
+            ))}
+        </div>
+        <div className="w-3/4">
+          <h1>DE</h1>
+          {setupsData &&
+            setupsData.DE.map((symbol: string, index: number) => (
               <Badge key={symbol}>{symbol}</Badge>
             ))}
         </div>
