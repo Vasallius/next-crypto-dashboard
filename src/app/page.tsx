@@ -82,6 +82,27 @@ export default function Home() {
           </Card>
         </div>
         <div className="w-3/4">
+          <h1>FOD</h1>
+          {setupsData &&
+            setupsData.FOD.map((symbol: string, index: number) => (
+              <Badge key={symbol}>{symbol}</Badge>
+            ))}
+        </div>
+        <div className="w-3/4">
+          <h1>FOB</h1>
+          {setupsData &&
+            setupsData.FOB.map((symbol: string, index: number) => (
+              <Badge key={symbol}>{symbol}</Badge>
+            ))}
+        </div>
+        <div className="w-3/4">
+          <h1>EMA4xMA8</h1>
+          {setupsData &&
+            setupsData.EMA4xMA8.map((symbol: string, index: number) => (
+              <Badge key={symbol}>{symbol}</Badge>
+            ))}
+        </div>
+        <div className="w-3/4">
           <h1>UPTREND</h1>
           {setupsData &&
             setupsData.uptrend.map((symbol: string, index: number) => (
