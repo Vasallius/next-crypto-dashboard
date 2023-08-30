@@ -14,11 +14,11 @@ interface SetupsApi {
   FOD: any[];
   _timeframe: string;
   downtrend: string[];
-  sidewaysreversal: string[];
-  sidewaysconsolidation: string[];
+  sideways_reversal: string[];
+  sideways_consolidation: string[];
   timetaken: number;
   uptrend: string[];
-  uptrendretrace: string[];
+  uptrend_retrace: string[];
   DE: string[];
 }
 
