@@ -72,9 +72,23 @@ export default function Home() {
             </CardContent>
           </Card>
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
-            <CardHeader className="text-center">Sideways</CardHeader>
+            <CardHeader className="text-center">Uptrend-Retrace</CardHeader>
+            <CardContent className="text-center">
+              {setupsData?.uptrend_retrace.length}
+            </CardContent>
+          </Card>
+          <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
+            <CardHeader className="text-center">Sideways-Reversal</CardHeader>
             <CardContent className="text-center">
               {setupsData?.sideways_reversal.length}
+            </CardContent>
+          </Card>
+          <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
+            <CardHeader className="text-center">
+              Sideways-Consolidation
+            </CardHeader>
+            <CardContent className="text-center">
+              {setupsData?.sideways_consolidation.length}
             </CardContent>
           </Card>
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
