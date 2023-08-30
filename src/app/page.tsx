@@ -74,7 +74,7 @@ export default function Home() {
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
             <CardHeader className="text-center">Sideways</CardHeader>
             <CardContent className="text-center">
-              {setupsData?.sidewaysreversal.length}
+              {setupsData?.sideways_reversal.length}
             </CardContent>
           </Card>
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
@@ -123,9 +123,11 @@ export default function Home() {
         <div className="w-3/4">
           <h1>SIDEWAYS</h1>
           {setupsData &&
-            setupsData.sidewaysreversal.map((symbol: string, index: number) => (
-              <Badge key={symbol}>{symbol}</Badge>
-            ))}
+            setupsData.sideways_reversal.map(
+              (symbol: string, index: number) => (
+                <Badge key={symbol}>{symbol}</Badge>
+              )
+            )}
         </div>
         <div className="w-3/4">
           <h1>DOWNTREND</h1>
