@@ -121,9 +121,25 @@ export default function Home() {
             ))}
         </div>
         <div className="w-3/4">
-          <h1>SIDEWAYS</h1>
+          <h1>UPTREND-RETRACE</h1>
+          {setupsData &&
+            setupsData.uptrend_retrace.map((symbol: string, index: number) => (
+              <Badge key={symbol}>{symbol}</Badge>
+            ))}
+        </div>
+        <div className="w-3/4">
+          <h1>SIDEWAYS-REVERSAL</h1>
           {setupsData &&
             setupsData.sideways_reversal.map(
+              (symbol: string, index: number) => (
+                <Badge key={symbol}>{symbol}</Badge>
+              )
+            )}
+        </div>
+        <div className="w-3/4">
+          <h1>SIDEWAYS-CONSOLIDATION</h1>
+          {setupsData &&
+            setupsData.sideways_consolidation.map(
               (symbol: string, index: number) => (
                 <Badge key={symbol}>{symbol}</Badge>
               )
