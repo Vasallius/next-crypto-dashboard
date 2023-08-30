@@ -14,9 +14,11 @@ interface SetupsApi {
   FOD: any[];
   _timeframe: string;
   downtrend: string[];
-  sideways: string[];
+  sidewaysreversal: string[];
+  sidewaysconsolidation: string[];
   timetaken: number;
   uptrend: string[];
+  uptrendretrace: string[];
   DE: string[];
 }
 
@@ -72,7 +74,7 @@ export default function Home() {
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
             <CardHeader className="text-center">Sideways</CardHeader>
             <CardContent className="text-center">
-              {setupsData?.sideways.length}
+              {setupsData?.sidewaysreversal.length}
             </CardContent>
           </Card>
           <Card className="w-full sm:w-60 mx-4 my-2 sm:my-0">
@@ -121,7 +123,7 @@ export default function Home() {
         <div className="w-3/4">
           <h1>SIDEWAYS</h1>
           {setupsData &&
-            setupsData.sideways.map((symbol: string, index: number) => (
+            setupsData.sidewaysreversal.map((symbol: string, index: number) => (
               <Badge key={symbol}>{symbol}</Badge>
             ))}
         </div>
